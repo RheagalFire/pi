@@ -1585,4 +1585,20 @@ describe("Generate E2E Tests", () => {
 			await multiTurn(llm, { apiKey: "test", reasoningEffort: "medium" });
 		});
 	});
+
+	describe.skipIf(!process.env.LITELLM_API_KEY)("LiteLLM Provider (claude-sonnet-4-6 via OpenAI Completions)", () => {
+		const llm = getModel("litellm", "anthropic/claude-sonnet-4-6");
+
+		it("should complete basic text generation", { retry: 3 }, async () => {
+			await basicTextGeneration(llm);
+		});
+
+		it("should handle tool calling", { retry: 3 }, async () => {
+			await handleToolCall(llm);
+		});
+
+		it("should handle streaming", { retry: 3 }, async () => {
+			await handleStreaming(llm);
+		});
+	});
 });

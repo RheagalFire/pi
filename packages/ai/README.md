@@ -67,6 +67,7 @@ Unified LLM API with automatic model discovery, provider configuration, token an
 - **Vercel AI Gateway**
 - **MiniMax**
 - **Together AI**
+- **LiteLLM** (100+ providers via LiteLLM proxy)
 - **GitHub Copilot** (requires OAuth, see below)
 - **Amazon Bedrock**
 - **OpenCode Zen**
@@ -801,7 +802,7 @@ A **provider** offers models through a specific API. For example:
 - **Google** models use the `google-generative-ai` API
 - **OpenAI** models use the `openai-responses` API
 - **Mistral** models use the `mistral-conversations` API
-- **xAI, Cerebras, Groq, Together AI, etc.** models use the `openai-completions` API (OpenAI-compatible)
+- **xAI, Cerebras, Groq, Together AI, LiteLLM, etc.** models use the `openai-completions` API (OpenAI-compatible)
 
 ### Querying Providers and Models
 

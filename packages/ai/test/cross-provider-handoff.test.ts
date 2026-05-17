@@ -113,6 +113,8 @@ const PROVIDER_MODEL_PAIRS: ProviderModelPair[] = [
 	{ provider: "kimi-coding", model: "kimi-k2-thinking", label: "kimi-coding-k2-thinking" },
 	// Mistral
 	{ provider: "mistral", model: "devstral-medium-latest", label: "mistral-devstral-medium" },
+	// LiteLLM
+	{ provider: "litellm", model: "anthropic/claude-sonnet-4-6", label: "litellm-claude-sonnet-4-6" },
 	// MiniMax
 	{ provider: "minimax", model: "MiniMax-M2.7", label: "minimax-m2.7" },
 	{ provider: "minimax-cn", model: "MiniMax-M2.7", label: "minimax-m2.7" },
